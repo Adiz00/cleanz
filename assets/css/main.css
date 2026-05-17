@@ -1619,6 +1619,10 @@ button {
     position: relative;
 }
 
+.margin-top{
+    /* margin-top: 260px; */
+}
+
 .hero-section svg {
     position: absolute;
     left: 0;
@@ -1628,6 +1632,11 @@ button {
 .hero-content h4 {
     color: #247ffb;
 }
+
+.hero-content p {
+    color: floralwhite;
+}
+
 
 .hero-section.video {
     background-image: url(../img/video-bg.jpg);
