@@ -636,7 +636,7 @@ button {
 }
 
 .header-logo img {
-    max-width: 90%;
+    max-width: 60%;
 }
 
 /* Headroom css */
@@ -1621,7 +1621,7 @@ button {
 }
 
 .margin-top{
-    /* margin-top: 260px; */
+    margin-top: -60px;
 }
 
 .hero-section svg {
