@@ -1608,7 +1608,8 @@ button {
     HERO SECTION
 ==============================================*/
 .hero-section {
-    background-image: url(../img/Duct\ Cleaning\ Service.jfif);
+    /* background-image: url(../img/Duct\ Cleaning\ Service.jfif); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/Duct\ Cleaning\ Service.jfif);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1631,6 +1632,13 @@ button {
 
 .hero-content h4 {
     color: #247ffb;
+}
+
+.hero-section h1 {
+    color: #BBDEFB;
+    /* font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 20px; */
 }
 
 .hero-content p {
