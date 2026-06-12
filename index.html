@@ -90,13 +90,13 @@
                                     <li><a href='services.html'>Our Services</a></li>
                                 </ul>
                             </li>
-                            <li><a href='projects-3-col.html'>Projects</a>
+                            <!-- <li><a href='projects-3-col.html'>Projects</a>
                                 <ul>
                                     <li><a href='projects-3-col.html'>Project 3 Col</a></li>
                                     <li><a href='projects-4-col.html'>Project 4 Col</a></li>
                                     <li><a href='project-details.html'>Project Details</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <!-- <li><a href="#">Pages</a>
                                 <ul>
                                     <li><a href='team.html'>Cleaning Exparts</a></li>
@@ -179,7 +179,10 @@
                         <div class="form-heading">
                             <h2>Make An Appointment</h2>
                         </div>
-                        <form action="https://te.dynamiclayers.net/cleanz/appointment.php" method="post" id="ajax_appointment" class="form-horizontal">
+                        <form action="https://formspree.io/f/xwvjwlzj" method="post" id="ajax_appointment" class="form-horizontal" accept-charset="UTF-8">
+                            <input type="hidden" name="_subject" value="New Appointment Request">
+                            <input type="hidden" name="_language" value="en">
+                            <input type="text" name="_honey" style="display:none">
                             <div class="form-group colum-row row">
                                 <div class="col-sm-6">
                                     <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
@@ -190,21 +193,21 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <select class="form-control" id="services" name="services">
-                                        <option>Choose a Service</option>
-                                        <option>Residential Cleaning</option>
-                                        <option>Commercial Cleaning</option>
-                                        <option>House Cleaning</option>
-                                        <option>Building Cleaning</option>
+                                    <select class="form-control" id="services" name="services" required>
+                                        <option value="">Choose a Service</option>
+                                        <option value="Residential Cleaning">Residential Cleaning</option>
+                                        <option value="Commercial Cleaning">Commercial Cleaning</option>
+                                        <option value="House Cleaning">House Cleaning</option>
+                                        <option value="Building Cleaning">Building Cleaning</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
-                                    <select class="form-control" id="sf" name="sf">
-                                        <option>-- Approx SF --</option>
-                                        <option>800</option>
-                                        <option>600</option>
-                                        <option>500</option>
-                                        <option>300</option>
+                                    <select class="form-control" id="sf" name="sf" required>
+                                        <option value="">-- Approx SF --</option>
+                                        <option value="800">800</option>
+                                        <option value="600">600</option>
+                                        <option value="500">500</option>
+                                        <option value="300">300</option>
                                     </select>
                                 </div>
                             </div>
@@ -241,7 +244,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="300ms">
                     <div class="service-card">
                         <div class="service-thumb">
-                            <img src="assets/img/service-1.jpg" alt="img">
+                            <img src="assets/img/dea-01-03.jpg.jpeg" alt="img">
                         </div>
                         <div class="service-content">
                             <div class="service-icon">
@@ -256,7 +259,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="400ms">
                     <div class="service-card">
                         <div class="service-thumb">
-                            <img src="assets/img/service-2.jpg" alt="img">
+                            <img src="assets/img/dea-01-01.jpg.jpeg" alt="img">
                         </div>
                         <div class="service-content">
                             <div class="service-icon">
@@ -271,7 +274,7 @@
                 <div class="col-lg-4 col-md-6 sm-padding wow fadeInUp" data-wow-delay="500ms">
                     <div class="service-card">
                         <div class="service-thumb">
-                            <img src="assets/img/service-3.jpg" alt="img">
+                            <img src="assets/img/dea-01-02.jpg.jpeg" alt="img">
                         </div>
                         <div class="service-content">
                             <div class="service-icon">
@@ -915,10 +918,10 @@
         </div>
     </section><!-- /.cta-section -->
 
-    <section class="project-section bg-grey padding">
+    <!-- <section class="project-section bg-grey padding">
         <div class="container-fluid">
             <div class="section-heading text-center mb-40 wow fadeInUp" data-wow-delay="200ms">
-                <!-- <img src="assets/img/clean.png" alt=""> -->
+                <img src="assets/img/clean.png" alt="">
                 <h2>What Our Clients Say</h2>
                 <p>See how Aircare Expert has helped local property owners improve their<br>air quality and system efficiency.</p>
             </div>
@@ -961,7 +964,8 @@
                 </div>
             </div>
         </div>
-    </section><!-- /.project-section -->
+    </section> -->
+    <!-- /.project-section -->
 
     <section class="testimonials-section padding">
         <div class="container">
@@ -973,7 +977,7 @@
             <div class="slider testimonials-carousel nav-style carousel-dots">
                 <div class="testi-item">
                     <div class="testi-inner">
-                        <img src="assets/img/testi-1.png" alt="thumb">
+                        <img src="assets/img/client4.jpg" alt="thumb">
                         <h3>Nenny Berry
                             <!-- <span>Developer</span> -->
                         </h3>
@@ -989,7 +993,7 @@
                 </div>
                 <div class="testi-item">
                     <div class="testi-inner">
-                        <img src="assets/img/testi-2.png" alt="thumb">
+                        <img src="assets/img/client5.jpg" alt="thumb">
                         <h3>Farina Castillo
                             <!-- <span>Developer</span> -->
                         </h3>
@@ -1005,7 +1009,7 @@
                 </div>
                 <div class="testi-item">
                     <div class="testi-inner">
-                        <img src="assets/img/testi-3.png" alt="thumb">
+                        <img src="assets/img/client6.jpg" alt="thumb">
                         <h3>Lucia Teseyra
                             <!-- <span>Developer</span> -->
                         </h3>

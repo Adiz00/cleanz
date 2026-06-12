@@ -772,7 +772,10 @@
                         <div class="form-heading">
                             <h2>Make An Appointment</h2>
                         </div>
-                        <form action="https://te.dynamiclayers.net/cleanz/appointment.php" method="post" id="ajax_appointment" class="form-horizontal">
+                        <form action="https://formspree.io/f/yourFormId" method="post" id="ajax_appointment" class="form-horizontal" accept-charset="UTF-8">
+                            <input type="hidden" name="_subject" value="New Appointment Request">
+                            <input type="hidden" name="_language" value="en">
+                            <input type="text" name="_honey" style="display:none">
                             <div class="form-group colum-row row">
                                 <div class="col-sm-6">
                                     <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
@@ -783,21 +786,21 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <select class="form-control" id="services" name="services">
-                                        <option>Choose a Service</option>
-                                        <option>Residential Cleaning</option>
-                                        <option>Commercial Cleaning</option>
-                                        <option>House Cleaning</option>
-                                        <option>Building Cleaning</option>
+                                    <select class="form-control" id="services" name="services" required>
+                                        <option value="">Choose a Service</option>
+                                        <option value="Residential Cleaning">Residential Cleaning</option>
+                                        <option value="Commercial Cleaning">Commercial Cleaning</option>
+                                        <option value="House Cleaning">House Cleaning</option>
+                                        <option value="Building Cleaning">Building Cleaning</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
-                                    <select class="form-control" id="sf" name="sf">
-                                        <option>-- Approx SF --</option>
-                                        <option>800</option>
-                                        <option>600</option>
-                                        <option>500</option>
-                                        <option>300</option>
+                                    <select class="form-control" id="sf" name="sf" required>
+                                        <option value="">-- Approx SF --</option>
+                                        <option value="800">800</option>
+                                        <option value="600">600</option>
+                                        <option value="500">500</option>
+                                        <option value="300">300</option>
                                     </select>
                                 </div>
                             </div>

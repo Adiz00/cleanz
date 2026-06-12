@@ -21,7 +21,11 @@ $(function() {
 		$.ajax({
 			type: 'POST',
 			url: $(form).attr('action'),
-			data: formData
+			data: formData,
+			dataType: 'json',
+			headers: {
+				'Accept': 'application/json'
+			}
 		})
 		.done(function(response) {
 			// Make sure that the formMessages div has the 'success' class.
@@ -29,7 +33,11 @@ $(function() {
 			$(formMessages).addClass('alert-success');
 
 			// Set the message text.
-			$(formMessages).text(response);
+			var successMessage = 'Thank you! Your appointment request has been sent successfully.';
+			if (response && response.message) {
+				successMessage = response.message;
+			}
+			$(formMessages).text(successMessage);
 
 			// Clear the form.
 			$('#name').val('');
@@ -42,16 +50,17 @@ $(function() {
 		})
 		.fail(function(data) {
 			// Make sure that the formMessages div has the 'error' class.
-      $(formMessages).removeClass('alert-danger');
-			$(formMessages).addClass('alert-success');
+      $(formMessages).removeClass('alert-success');
+			$(formMessages).addClass('alert-danger');
 
 			// Set the message text.
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Thank You! Your appointment has been completed.');
+			var errorMessage = 'Sorry, something went wrong. Please try again later.';
+			if (data.responseJSON && data.responseJSON.error) {
+				errorMessage = data.responseJSON.error;
+			} else if (data.responseText !== '') {
+				errorMessage = data.responseText;
 			}
-      $('.form-control').val('');
+			$(formMessages).text(errorMessage);
 		});
 
 	});
