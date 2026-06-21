@@ -215,19 +215,18 @@
                                 <div class="col-sm-6">
                                     <select class="form-control" id="services" name="services" required>
                                         <option value="">Choose a Service</option>
-                                        <option value="Residential Cleaning">Residential Cleaning</option>
-                                        <option value="Commercial Cleaning">Commercial Cleaning</option>
-                                        <option value="House Cleaning">House Cleaning</option>
-                                        <option value="Building Cleaning">Building Cleaning</option>
+                                        <option value="Air Duct Cleaning">Air Duct Cleaning</option>
+                                        <option value="Dryer Vent Cleaning">Dryer Vent Cleaning</option>
+                                        <option value="Chimney Cleaning">Chimney Cleaning</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
-                                    <select class="form-control" id="sf" name="sf" required>
-                                        <option value="">-- Approx SF --</option>
-                                        <option value="800">800</option>
-                                        <option value="600">600</option>
-                                        <option value="500">500</option>
-                                        <option value="300">300</option>
+                                    <select class="form-control" id="sf" name="units" required>
+                                        <option value="">Number of Units</option>
+                                        <option value="1 Unit">1 Unit</option>
+                                        <option value="2 Units">2 Units</option>
+                                        <option value="3 Units">3 Units</option>
+                                        <option value="4+ Units">3+ Units</option>
                                     </select>
                                 </div>
                             </div>
@@ -241,7 +240,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <input type="hidden" name="address" value="" />
+                                    <input type="text" name="address" class="form-control" placeholder="Address" required>
                                 </div>
                             </div>
                             <button id="submit" class="default-btn" type="submit">Book Service Now</button>
