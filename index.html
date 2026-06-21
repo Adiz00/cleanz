@@ -134,7 +134,7 @@
                     </div><!-- /.header-menu-wrap -->
                     <div class="header-right">
                         <div class="search-icon dl-search-icon"><i class="ti-search"></i></div>
-                        <a class="header-btn" href="#">Book A Cleaner<span></span></a>
+                        <a class="header-btn" href="#appointment-form">Book A Cleaner<span></span></a>
                         <!-- Burger menu -->
                         <div class="mobile-menu-icon">
                             <div class="burger-menu">
@@ -164,7 +164,7 @@
                 <h4>Because Clean Feels Better</h4>
                 <h1>Clear Your Ducts.<br>Clean Your Air.</h1>
                 <p>Professional air duct, vent, and<br> complete specialty cleaning services.</p>
-                <a href="#" class="default-btn">Get A Service<span></span></a>
+                    <a href="#appointment-form" class="default-btn">Get A Service<span></span></a>
             </div>
         </div>
         <svg viewBox="0 0 1920 479.1">
@@ -184,21 +184,23 @@
                         </div>
                         <ul class="about-btn wow fadeInLeft" data-wow-delay="600ms">
                             <li>
-                                <a href="#" class="default-btn">Book Our Service <span></span></a>
-                                <a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i>
+                                <a href="#appointment-form" class="default-btn">Book Our Service <span></span></a>
+                                <a class="whatsapp" href="https://wa.me/18075000502" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i>
                                     +1 (807) 500‑0502</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6 sm-padding">
-                    <div class="booking-form">
+                    <div class="booking-form" id="appointment-form">
                         <div class="form-heading">
                             <h2>Make An Appointment</h2>
                         </div>
-                        <form action="https://formsubmit.co/aircareexperts83@gmail.com" method="post" id="ajax_appointment" class="form-horizontal" accept-charset="UTF-8">
+                        <form action="https://formsubmit.co/el/tuvuso" method="post" id="ajax_appointment" class="form-horizontal" accept-charset="UTF-8">
                             <input type="hidden" name="_subject" value="New Appointment Request">
                             <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="index.html?success=1">
+                            <input type="hidden" name="_template" value="table">
                             <input type="text" name="_honey" style="display:none">
                             <div class="form-group colum-row row">
                                 <div class="col-sm-6">
@@ -238,7 +240,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <textarea id="address" name="address" cols="30" rows="5" class="form-control address" placeholder="Address" required></textarea>
+                                    <input type="hidden" name="address" value="" />
                                 </div>
                             </div>
                             <button id="submit" class="default-btn" type="submit">Book Service Now</button>
@@ -822,7 +824,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="default-btn">Book Our Service <span></span></a>
+                    <a href="#appointment-form" class="default-btn">Book Our Service <span></span></a>
                 </div>
             </div>
         </div>
@@ -930,7 +932,7 @@
                 <img class="wow fadeInUp" data-wow-delay="0" src="assets/img/cleaning.png" alt="icon">
                 <h2 class="wow fadeInUp" data-wow-delay="300ms">Optimize Your HVAC System <br>& Breathe Better!</h2>
                 <p class="wow fadeInUp" data-wow-delay="400ms">Don't let hidden dust and debris lower your air quality and drive up your energy bills. <br> Schedule your professional system inspection today.</p>
-                <a href="#" class="default-btn wow fadeInUp" data-wow-delay="500ms">Make An Appointment<span></span></a>
+                <a href="#appointment-form" class="default-btn wow fadeInUp" data-wow-delay="500ms">Make An Appointment<span></span></a>
             </div>
         </div>
     </section><!-- /.cta-section -->
@@ -1111,9 +1113,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 sm-padding">
                     <div class="footer-item">
-                        <h3>Headquarters</h3>
-                        <p>962 Fifth Avenue, 3rd Floor New York, NY10022</p>
-                        <p><a href="https://te.dynamiclayers.net/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="256d4049494a65714d4048406044565140570b4b4051">[email&#160;protected]</a> <br>(+123) 456 789 101</p>
+                        <h3>Contact</h3>
+                        <p><a href="https://te.dynamiclayers.net/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="256d4049494a65714d4048406044565140570b4b4051">[email&#160;protected]</a></p>
+                        <p>Phone: <a href="tel:+12149356779">+12149356779</a></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 sm-padding">
@@ -1173,6 +1175,29 @@
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/appointment.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+    (function(){
+        try{
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('success') === '1') {
+                var msgs = document.getElementById('form-messages');
+                if (msgs) {
+                    msgs.classList.remove('alert-danger');
+                    msgs.classList.add('alert-success');
+                    msgs.textContent = 'Thank you! Your appointment request has been sent successfully.';
+                    msgs.style.display = 'block';
+                    var el = document.getElementById('appointment-form');
+                    if (el) { el.scrollIntoView({behavior:'smooth'}); }
+                }
+                if (history && history.replaceState) {
+                    var url = window.location.protocol + '//' + window.location.host + window.location.pathname;
+                    history.replaceState({}, document.title, url);
+                }
+            }
+        }catch(e){}
+    })();
+    </script>
 
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f6270b4fa6ffde8',t:'MTc3Nzg0NDU5NQ=='};var a=document.createElement('script');a.src='../cdn-cgi/challenge-platform/h/g/scripts/jsd/fe6331af5207/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"66c9e2d05ffd40608761a8fdcdbd0b45","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
