@@ -196,12 +196,13 @@
                         <div class="form-heading">
                             <h2>Make An Appointment</h2>
                         </div>
-                        <form action="https://formsubmit.co/el/tuvuso" method="post" id="ajax_appointment" class="form-horizontal" accept-charset="UTF-8">
-                            <input type="hidden" name="_subject" value="New Appointment Request">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="index.html?success=1">
-                            <input type="hidden" name="_template" value="table">
-                            <input type="text" name="_honey" style="display:none">
+                        <form action="https://api.web3forms.com/submit" method="post" id="ajax_appointment" class="form-horizontal" accept-charset="UTF-8">
+                            <!-- Web3Forms integration: replace YOUR_ACCESS_KEY_HERE with your access key from https://web3forms.com -->
+                            <input type="hidden" name="access_key" value="cccc4f07-656f-470e-9d96-b01a1c3ed670">
+                            <input type="hidden" name="subject" value="New Appointment Request">
+                            <input type="hidden" name="from_name" value="Aircare Expert Website">
+                            <input type="hidden" name="replyto" value="">
+                            <input type="text" name="honeypot" style="display:none">
                             <div class="form-group colum-row row">
                                 <div class="col-sm-6">
                                     <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
